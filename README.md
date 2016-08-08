@@ -32,8 +32,13 @@ Quick start
     )
     ```
 
-1. (Optionally) Add a path to the [MaxMind GeoIP cities databases](http://dev.maxmind.com/geoip/legacy/geolite/) ([direct
-link](http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz) because I'm nice) in your settings file:
+1. Tell EasyTimezones where your [MaxMind GeoLite2 City Database](http://dev.maxmind.com/geoip/geoip2/geolite2/) is in your settings.py. Here's a [direct download link](http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz).
+
+    ```python
+    GEOIP2_DATABASE = '/path/to/your/geoip2/database/GeoLite2-City.mmdb'
+    ```
+
+    Need the [legacy MaxMind GeoIP cities databases](http://dev.maxmind.com/geoip/legacy/geolite/)? No problem! Just include both the IPv4 and IPv6 versions like this:
 
     ```python
     GEOIP_DATABASE = '/path/to/your/geoip/database/GeoLiteCity.dat'
